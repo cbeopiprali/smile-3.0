@@ -51,8 +51,8 @@ var surveyJSON = {
       "elements": [
         {
           "type": "dropdown",
-          "name": "peeoName",
-          "title": "PEEO",
+          "name": "पंचायत नाम ",
+          "title": "पंचायत",
           "isRequired": true,
           "choices": [
             "ABHAYPURA",
@@ -102,8 +102,8 @@ var surveyJSON = {
         },
         {
           "type": "dropdown",
-          "name": "schoolName",
-          "title": "School",
+          "name": "विद्यालय नाम ",
+          "title": "विद्यालय ",
           "isRequired": true,
           "choices": [
             {
@@ -1270,7 +1270,7 @@ var surveyJSON = {
           "isRequired": true,
           "columns": [
             {
-              "name": "Class",
+              "name": "कक्षा ",
               "cellType": "dropdown",
               "isRequired": true,
               "choices": [
@@ -1338,31 +1338,31 @@ var surveyJSON = {
               "inputType": "number"
             },
             {
-              "name": "watts app से जुड़े विद्यार्थी  (स्मार्ट फ़ोन )",
+              "name": "watts app से जुड़े विद्यार्थी संख्या  (स्मार्ट फ़ोन )",
               "cellType": "text",
               "isRequired": true,
               "inputType": "number"
             },
             {
-              "name": "शिक्षा दर्शन लाभान्वित  (दूरदर्शन )",
+              "name": "शिक्षा दर्शन लाभान्वित संख्या   (दूरदर्शन )",
               "cellType": "text",
               "isRequired": true,
               "inputType": "number"
             },
             {
-              "name": "शिक्षा वाणी लाभान्वित  (रेडियो )",
+              "name": "शिक्षा वाणी लाभान्वित संख्या  (रेडियो )",
               "cellType": "text",
               "isRequired": true,
               "inputType": "number"
             },
             {
-              "name": "विद्यालय आकर गृह कार्य लेने वाले ()",
+              "name": "विद्यालय आकर गृह कार्य लेने वाले  संख्या ",
               "cellType": "text",
               "isRequired": true,
               "inputType": "number"
             },
             {
-              "name": "HW Portfolio Prepared",
+              "name": "विद्यार्थी के घर तक शिक्षक द्वारा गृह कार्य हेतु संख्या ",
               "cellType": "text",
               "isRequired": true,
               "inputType": "number"
@@ -1394,16 +1394,16 @@ function sendDataToServer(survey) {
                     $.post( "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdR7aTfCEfNefriSXpmKD6ccLT6QEVbGXtnGVoAWiig7w6MSA/formResponse",
                     {
                     "entry.2081806952": data.date,
-					"entry.1997249446": data.peeoName,
-					"entry.1341436243": data.schoolName,
-					"entry.1365237637": q["Class"],
+					"entry.1997249446": data.पंचायतनाम ,
+					"entry.1341436243": data.विध्यालायानाम ,
+					"entry.1365237637": q["कक्षा "],
 					"entry.993949122": q["Subject"],
-					"entry.791177180": q["Total Enrolment"],
-					"entry.510921074": q["HW Given (Online)"],
-					"entry.2111580312": q["HW Given (Offline)"],
-					"entry.1681330709": q["HW Collected (Online)"],
-					"entry.79184850": q["HW Collected (Offline)"],
-					"entry.51442607": q["HW Portfolio Prepared"]
+					"entry.791177180": q["कुल नामांकन"],
+					"entry.510921074": q["watts app से जुड़े विद्यार्थी संख्या  (स्मार्ट फ़ोन )"],
+					"entry.2111580312": q["शिक्षा दर्शन लाभान्वित संख्या   (दूरदर्शन )"],
+					"entry.1681330709": q["शिक्षा वाणी लाभान्वित संख्या  (रेडियो )"],
+					"entry.79184850": q["विद्यालय आकर गृह कार्य लेने वाले  संख्या"],
+					"entry.51442607": q["विद्यार्थी के घर तक शिक्षक द्वारा गृह कार्य हेतु संख्या"]
                     }
                     );
 					}
