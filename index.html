@@ -1427,6 +1427,7 @@ function sendDataToServer(survey) {
 					
 					for (i = 0; i < data.question2.length; i++) {
 					var q = data.question2[i];
+						console.log(q);
                     $.post( "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdR7aTfCEfNefriSXpmKD6ccLT6QEVbGXtnGVoAWiig7w6MSA/formResponse",
                     {
                     "entry.2081806952": data.date,
